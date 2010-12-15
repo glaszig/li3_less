@@ -24,6 +24,10 @@ Clone li3_less with your favorite git client into the libraries folder of your l
 
 > git clone git@github.com:glaszig/li3_less.git /path/to/li3/libraries/li3_less
 
+and activate li3_less in you app (config/bootstrap/libraries.php), of course:
+
+> Libraries::add('li3_less');
+
 ### Credits
 
 lessphp: <http://leafo.net/lessphp/>  
