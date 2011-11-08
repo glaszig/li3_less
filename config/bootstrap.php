@@ -14,6 +14,10 @@ use lithium\storage\Cache;
 
 require dirname(__DIR__).'/libraries/lessphp/lessc.inc.php';
 
+/**
+ * TODO: Make sure, that subfolders are possible (currently not)
+ *
+ */
 Dispatcher::applyFilter('run', function($self, $params, $chain) {
 	
 	if(strstr($params['request']->url, '.css')) {
