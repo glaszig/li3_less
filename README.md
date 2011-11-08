@@ -28,6 +28,10 @@ and activate li3_less in you app (config/bootstrap/libraries.php), of course:
 
 > Libraries::add('li3_less');
 
+Also, you should chmod the less folder, so generated .css files can be cached.
+
+> chmod 0777 app/webroot/less
+
 ### Credits
 
 lessphp: <http://leafo.net/lessphp/>  
