@@ -2,39 +2,53 @@
 
 This is a real-time less parser for your li3 setup.
 
-## Requirements
-
-li3: <http://www.lithify.me>
-
-li3_less (see installation notes below)
+## Usage
 
 Put your less stylesheets into a folder 'less' in your webroot. For example:  
-/path/to/li3/app/webroot/less/my-styles.css.less
+
+	app/webroot/less/styles.css.less
 
 In your layout view file, link to your stylesheet as usual:  
-> echo $this->Html->style('my-styles.css');
 
-From now on, magic will happen, as long as you keep your .css.less files in webroot/less.  
-li3_less will now convert your my-styles.css.less file into my-styles.css and serve it.  
-The .css file will be cached and served in webroot/less until you modify the corresponding less file.
+	echo $this->Html->style('styles.css');
+
+From now on, magic will happen, as long as you keep your .css.less files in `webroot/less`.
+li3_less will now convert your `styles.css.less` file into `styles.css` and serve it.
+The `.css` file will be cached and served in `webroot/less` until you modify the corresponding less file.
 
 ## Installation
 
-Clone li3_less with your favorite git client into the libraries folder of your li3 app.
+Add li3_less as submodule to your li3 libraries:
 
-> git clone git@github.com:glaszig/li3_less.git /path/to/li3/libraries/li3_less
+	git submodule add git@github.com:bruensicke/li3_less.git libraries/li3_less
 
 and activate li3_less in you app (config/bootstrap/libraries.php), of course:
 
-> Libraries::add('li3_less');
+	Libraries::add('li3_less');
 
 Also, you should chmod the less folder, so generated .css files can be cached.
 
-> chmod 0777 app/webroot/less
+	chmod 0777 app/webroot/less
+
+## Requirements
+
+- [lithium li3](https://github.com/UnionOfRAD/lithium)
+- [li3_less](https://github.com/bruensicke/li3_less)
+
+
+## Todos
+
+The following points is my roadmap. If you need any of this features sooner than later, please let me know.
+
+- allow for recursive directoy structure
+- put parsed files at resources/tmp (that is, where app has write-access)
 
 ### Credits
 
-lessphp: <http://leafo.net/lessphp/>  
-li3: <http://www.lithify.me>
+This fork is a slightly enhanced version. 
+For original code, see [glaszig/li3_less](https://github.com/glaszig/li3_less)
 
-Please report any bug.
+- [lessphp](http://leafo.net/lessphp/)
+- [li3](http://www.lithify.me)
+
+Please report any bug at [bruensicke/li3_less/issues](https://github.com/bruensicke/li3_less/issues) or at [glaszig/li3_less/issues](https://github.com/glaszig/li3_less).
