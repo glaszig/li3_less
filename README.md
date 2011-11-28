@@ -40,6 +40,7 @@ Also, you should chmod the less folder, so generated .css files can be cached.
 
 The following points is my roadmap. If you need any of this features sooner than later, please let me know.
 
+- use Libraries:add() instead of require to load lessphp
 - allow for recursive directoy structure
 - put parsed files at resources/tmp (that is, where app has write-access)
 
