@@ -18,11 +18,11 @@ The `.css` file will be cached and served in `webroot/less` until you modify the
 
 ## Installation
 
-Add li3_less as submodule to your li3 libraries:
+Add a submodule to your li3 libraries:
 
 	git submodule add git@github.com:bruensicke/li3_less.git libraries/li3_less
 
-and activate li3_less in you app (config/bootstrap/libraries.php), of course:
+and activate it in you app (config/bootstrap/libraries.php), of course:
 
 	Libraries::add('li3_less');
 
