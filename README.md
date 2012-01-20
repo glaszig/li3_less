@@ -1,6 +1,6 @@
 # li3_less
 
-This is a real-time less parser for your li3 setup.
+This is a real-time less parser for your li3 app.
 
 ## Usage
 
@@ -20,7 +20,7 @@ The `.css` file will be cached and served in `webroot/less` until you modify the
 
 Add a submodule to your li3 libraries:
 
-	git submodule add git@github.com:bruensicke/li3_less.git libraries/li3_less
+	git submodule add git@github.com:glaszig/li3_less.git libraries/li3_less
 
 and activate it in you app (config/bootstrap/libraries.php), of course:
 
@@ -33,23 +33,18 @@ Also, you should chmod the less folder, so generated .css files can be cached.
 ## Requirements
 
 - [lithium li3](https://github.com/UnionOfRAD/lithium)
-- [li3_less](https://github.com/bruensicke/li3_less)
-
 
 ## Todos
 
-The following points is my roadmap. If you need any of this features sooner than later, please let me know.
-
 - use Libraries:add() instead of require to load lessphp
-- allow for recursive directoy structure
-- put parsed files at resources/tmp (that is, where app has write-access)
+- move the less folder out of the webroot
 
 ### Credits
 
-This fork is a slightly enhanced version. 
-For original code, see [glaszig/li3_less](https://github.com/glaszig/li3_less)
-
 - [lessphp](http://leafo.net/lessphp/)
 - [li3](http://www.lithify.me)
+- [bruensicke's fork](http://github.com/bruensicke/li3_less)
 
-Please report any bug at [bruensicke/li3_less/issues](https://github.com/bruensicke/li3_less/issues) or at [glaszig/li3_less/issues](https://github.com/glaszig/li3_less).
+Please report any bug at [glaszig/li3_less/issues](https://github.com/glaszig/li3_less/issues) 
+or at [bruensicke/li3_less/issues](https://github.com/bruensicke/li3_less).
+
