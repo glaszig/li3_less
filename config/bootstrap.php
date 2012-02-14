@@ -31,6 +31,6 @@ Dispatcher::applyFilter('run', function($self, $params, $chain) {
 	$output = Less::file($less_file, array('cache' => true));
 	return new Response(array(
 		'body' => $output,
-		'headers' => array('Content-type' => 'text/javascript')
+		'headers' => array('Content-type' => 'text/css')
 	));
 });
