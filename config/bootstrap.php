@@ -11,17 +11,17 @@
 use lithium\action\Dispatcher;
 use lithium\core\Libraries;
 use lithium\storage\Cache;
+use lithium\action\Response;
+use li3_less\core\Less;
 
 Dispatcher::applyFilter('run', function($self, $params, $chain) {
 
-	if(!strstr($params['request']->url, '.css')) {
+	if(!strstr($params['request']->url, '.less')) {
 		return $chain->next($self, $params, $chain);
 	}
 
 	// look for a matching less file
-	$basename = basename($params['request']->url);
-	$less_path =  LITHIUM_APP_PATH.'/webroot/less';
-	$less_file = str_replace('.css', '.less', "$less_path/$basename");
+	$less_file =  LITHIUM_APP_PATH.'/webroot/' . str_replace('.less', '.css.less', $params['request']->url);
 
 	if(!file_exists($less_file)) {
 		return $chain->next($self, $params, $chain);
