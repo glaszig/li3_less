@@ -34,3 +34,5 @@ Dispatcher::applyFilter('run', function($self, $params, $chain) {
 		'headers' => array('Content-type' => 'text/css')
 	));
 });
+
+?>
